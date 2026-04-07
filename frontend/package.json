@@ -9,8 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "jest",
-    "start": "node server.js"
+    "test": "jest"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

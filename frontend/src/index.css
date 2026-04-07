@@ -1,1 +1,8 @@
 @import url(./vendor/fonts.css);
+@import url(./styles/Page.css);
+@import url(./styles/Navbar.css);
+@import url(./styles/About.css);
+@import url(./styles/Home.css);
+@import url(./styles/Portfolio.css);
+@import url(./styles/Animations/Masonry.css);
+@import url(./styles/Footer.css);
