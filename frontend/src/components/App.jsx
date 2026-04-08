@@ -1,7 +1,8 @@
 import Navbar from "../components/Navbar/Navbar.jsx";
 import Home from "../pages/Home.jsx";
 import About from "../pages/About.jsx";
-// import Portfolio from "../pages/Portfolio.jsx";
+import Proyectos from "../pages/Proyectos.jsx";
+import Servicios from "../pages/Servicios.jsx";
 import Footer from "./Footer/Footer.jsx";
 
 import {
@@ -19,7 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+          <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/servicios" element={<Servicios />} />
         </Routes>
         <Footer />
       </BrouserRouter>

@@ -3,6 +3,53 @@
 @import url(./styles/Navbar.css);
 @import url(./styles/About.css);
 @import url(./styles/Home.css);
-@import url(./styles/Portfolio.css);
+@import url(./styles/Proyectos.css);
+@import url(./styles/Servicios.css);
 @import url(./styles/Animations/Masonry.css);
+@import url(./styles/Animations/GalleryLoop.css);
 @import url(./styles/Footer.css);
+
+:root {
+  /* Industrial Monolith Palette - The Tactile Archive */
+  --color-surface: #fcf9f2;
+  --color-surface-container: #f1eee7;
+  --color-surface-container-low: #f6f3ec;
+  --color-surface-container-high: #ebe8e1;
+  --color-surface-container-highest: #e5e2db;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1c1c18;
+  --color-primary: #6b002a;
+  --color-primary-container: #8b1d40;
+  --color-on-primary: #ffffff;
+  --color-secondary: #695b57;
+  --color-on-secondary-container: #6d605b;
+  --color-outline-variant: rgba(221, 191, 195, 0.2);
+  --color-surface-tint: rgba(167, 51, 84, 0.05);
+  
+  /* Typography Scale */
+  --font-display: 'Newsreader', serif;
+  --font-headline: 'Newsreader', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Manrope', sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+

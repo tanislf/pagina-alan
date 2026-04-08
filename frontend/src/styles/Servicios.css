@@ -1,0 +1,211 @@
+.servicios {
+  background-color: var(--surface, #fcf9f2);
+  min-height: 100vh;
+  padding: 120px 5% 80px;
+  color: var(--on-surface, #1c1c18);
+}
+
+.servicios__header {
+    display: flex;
+    
+  margin-bottom: 100px;
+ width: 100%;
+}
+
+.servicios__title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+.servicios__title2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #6b002a;
+}
+
+.srvicios__subtitle-container,
+.servicios__subtitle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    position: relative;
+    margin-left: 30px;
+    width: 50%;
+    margin-top: 20px;
+       
+}
+
+.servicios__subtitle {
+    position: absolute;
+    bottom: 0;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    color: var(--on-secondary-container, #6d605b);
+    text-align: justify;
+    padding-left: 20px; 
+    padding-bottom: 15px;
+    border-left: 1px solid var(--primary, #6b002a); 
+}
+
+/* Phases Section */
+.servicios__phases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+  margin-bottom: 120px;
+}
+
+.servicios__phase {
+  padding: 40px;
+  background: var(--surface-container-low, #f6f3ec);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.servicios__phase:hover {
+  background: var(--surface-container-lowest, #ffffff);
+  transform: translateY(-5px);
+}
+
+.servicios__phase-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  color: var(--primary, #6b002a);
+  display: block;
+  margin-bottom: 24px;
+}
+
+.servicios__phase-icon {
+  width: 24px;
+  height: 24px;
+  opacity: 0.9;
+  margin-right: 12px;
+}
+
+.servicios__phase-title {
+  display: flex;
+  align-items: center;
+  font-family: 'Newsreader', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: var(--on-surface, #1c1c18);
+}
+
+.servicios__phase-desc {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--on-secondary-container, #6d605b);
+}
+
+.servicios__phase-icon-container {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.servicios__phase-icon-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  color: var(--primary, #6b002a);
+}
+
+/* Category Navigation Sections */
+.servicios__nav-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 100px;
+  border-top: 1px solid rgba(137, 113, 117, 0.1);
+  padding-top: 80px;
+}
+
+.servicios__nav-item {
+  cursor: pointer;
+  display: inline-block;
+  max-width: fit-content;
+}
+
+.servicios__nav-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--secondary, #695b57);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.servicios__nav-title {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.servicios__nav-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary, #6b002a);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servicios__nav-item:hover .servicios__nav-title {
+  color: var(--primary, #6b002a);
+  transform: translateX(10px);
+}
+
+.servicios__nav-item:hover .servicios__nav-title::after {
+  width: 100%;
+}
+
+/* Decorative Number */
+.servicios__deco-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--on-surface, #1c1c18);
+  opacity: 0.05;
+  margin-top: 120px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicios {
+    padding-top: 100px;
+  }
+  
+  .servicios__phases {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .servicios__title {
+    font-size: 2.2rem;
+  }
+
+  .servicios__phase {
+    padding: 30px;
+  }
+}

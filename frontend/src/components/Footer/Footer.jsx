@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import sayarpng from "../../images/Sayar.png";
+import sayarpng from "../../images/Logos/Sayar.png";
 
 function Footer({ onContactClick }) {
   return (

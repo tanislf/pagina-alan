@@ -1,33 +1,28 @@
+
 .about {
-  display: flex;
-  justify-content: center;
-  background-color: white;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 80px;
+  align-items: start;
+  background-color: var(--color-surface);
   width: 100%;
   min-height: 100vh;
-  gap: 50px;
+  padding: 120px 100px 100px;
 }
 
-.about__container {
-  width: 50%;
-}
-
-.about__me {
-  font-family: "JetBrains Mono";
-  font-size: 40px;
-  margin: 0;
-  padding-bottom: 20px;
+/* ---- COLUMNA IMAGEN ---- */
+.about__image-col {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .about__me-image-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  max-width: 380px;
-  height: 70vh;
   aspect-ratio: 4 / 5;
-
   overflow: hidden;
   background: #f5f5f5;
   box-shadow:
@@ -36,7 +31,6 @@
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
-  animation: fadeInUp 0.7s ease both;
 }
 
 .about__me-image {
@@ -50,22 +44,22 @@
 }
 
 .about__me-image-container:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-6px) scale(1.01);
   box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.14),
-    0 6px 12px rgba(0, 0, 0, 0.08);
+    0 18px 45px rgba(0, 0, 0, 0.12),
+    0 6px 12px rgba(0, 0, 0, 0.06);
 }
 
 .about__me-image-container:hover .about__me-image {
-  transform: scale(1.08);
-  filter: brightness(1.05) contrast(1.03);
+  transform: scale(1.06);
+  filter: grayscale(0%) brightness(1.02);
 }
 
 .about__me-image-container::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.12), transparent 60%);
+  background: linear-gradient(to top, rgba(107, 0, 42, 0.08), transparent 60%);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -74,121 +68,177 @@
   opacity: 1;
 }
 
-.about__description {
-  font-family: "Barlow";
-  text-align: justify;
-  padding-bottom: 20px;
-  margin: 0;
-  line-height: 25px;
+.about__deco-number {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--color-secondary);
+  opacity: 0.4;
+  align-self: flex-end;
 }
 
-.about__specs {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-bottom: 40px;
-}
-
-.about__specs-container {
-  display: flex;
-  height: 40px;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #888888;
-  border-top: 1px solid#888888;
-}
-.about__specs-label {
-  font-family: "JetBrains Mono";
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #888888;
-}
-
-.about__specs-value {
-  font-family: "Barlow";
-  font-size: 14px;
-  font-weight: 500;
-  color: black;
-}
-
-.about__awards {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.about__awards-title {
-  font-family: "JetBrains Mono";
-  font-size: 14px;
-  margin: 0;
-  color: #888888;
-}
-.about__awards-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.about__awards-year {
-  font-family: "JetBrains Mono";
-  font-size: 12px;
-  color: #8b1d40;
-  font-weight: bold;
-  padding-right: 10px;
-}
-
-.about__awards-name {
-  font-family: "Barlow";
-  font-size: 14px;
-  color: #333333;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .about__link,
-  .about__link::after {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
+/* ---- COLUMNA CONTENIDO ---- */
 .about__container {
-  animation: fadeInUp 0.7s ease both;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.about__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin: 0;
 }
 
 .about__me {
-  animation: fadeInUp 0.7s ease both;
-  animation-delay: 0.06s;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--color-on-surface);
 }
 
-.about__welcome {
-  animation: fadeInUp 0.7s ease both;
-  animation-delay: 0.1s;
+.about__title-line {
+  width: 48px;
+  height: 1.5px;
+  background-color: var(--color-primary);
 }
 
 .about__description {
-  animation: fadeInUp 0.7s ease both;
-  animation-delay: 0.14s;
+  font-family: var(--font-body);
+  font-size: 0.975rem;
+  line-height: 1.8;
+  color: var(--color-secondary);
+  margin: 0;
+  max-width: 52ch;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ---- SPECS ---- */
+.about__specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--color-outline-variant);
 }
 
-@keyframes imageAppear {
-  from {
-    opacity: 0;
-    transform: scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.about__specs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-outline-variant);
 }
+
+.about__specs-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.about__specs-value {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-on-surface);
+  text-align: right;
+}
+
+/* ---- LOGROS — ACORDEÓN ---- */
+.about__awards {
+  border-top: 1px solid var(--color-outline-variant);
+}
+
+.about__awards-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.about__awards-trigger[aria-expanded="true"] {
+  border-bottom-color: var(--color-outline-variant);
+}
+
+.about__awards-trigger:hover .about__awards-trigger-label {
+  color: var(--color-primary);
+}
+
+.about__awards-trigger-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  transition: color 0.25s ease;
+}
+
+.about__awards-trigger-icon {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  line-height: 1;
+  width: 20px;
+  text-align: center;
+}
+
+.about__awards-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__award-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.about__award-year {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  width: 36px;
+}
+
+.about__award-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.about__award-name {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.about__award-event {
+  font-family: var(--font-body);
+  font-size: 0.775rem;
+  color: var(--color-secondary);
+  letter-spacing: 0.02em;
+}
+

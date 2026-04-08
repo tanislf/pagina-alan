@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
+  background-color: #fcf9f2;
   margin: 30px 0 0 0;
   gap: 30px;
   height: 100vh;
@@ -46,18 +46,6 @@
   font-family: "Quicksand";
 }
 
-.footer__link:hover {
-  color: turquoise;
-  transition: all 0.5s;
-  transform: translate(0, -0.4em);
-  box-shadow: 0 0 0 0 #fff;
-  text-decoration: none;
-}
-
-.footer__link:not(hover) {
-  transition: all 1s;
-}
-
 .footer__buttons {
   display: flex;
   justify-content: center;
@@ -86,7 +74,7 @@
 }
 
 .footer__button_insta {
-  background-image: url("../images/instagram.svg");
+  background-image: url("../images/Icons/instagram.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 25px;
@@ -98,7 +86,7 @@
 }
 
 .footer__button_linkedin {
-  background-image: url("../images/linkedin.svg");
+  background-image: url("../images/Icons/linkedin.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -110,7 +98,7 @@
 }
 
 .footer__button_behance {
-  background-image: url("../images/behance.svg");
+  background-image: url("../images/Icons/behance.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 25px;

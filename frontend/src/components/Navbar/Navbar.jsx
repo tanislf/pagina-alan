@@ -1,5 +1,5 @@
 // import sayarlogosolo from "../../images/Sayarlogosolo.png";
-import sayarlogo from "../../images/Sayar-L.png";
+import sayarlogo from "../../images/Logos/Sayar-L.png";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";

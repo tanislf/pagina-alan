@@ -1,85 +1,186 @@
+
+
 .home {
-  animation: portfolioFadeInUp 0.6s ease forwards;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  background-color: rgb(224, 214, 215);
-  background-image: url(../images/cafartaza.jpg);
-  background-size: cover;
-  background-position: center;
   width: 100%;
   min-height: 100vh;
+  background-color: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+}
+ 
+/* Grain texture overlay */
+.home__grain {
+  position: absolute;
+  inset: 0;
+  /* background-image: url("../images/Home/cafartaza.png"); */
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+ 
+/* Hero layout — dos columnas */
+.home__hero {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+}
+ 
+/* ---- LEFT ---- */
+.home__hero-left {
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+ 
+.home__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+ 
+.home__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+ 
+.home__title-line {
+  width: 48px;
+  height: 1.5px;
+  background-color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+ 
+.home__title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-on-surface);
+  display: flex;
+  flex-direction: column;
+}
+ 
+.home__title-word {
+  display: block;
+}
+ 
+.home__title-span {
+  display: block;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+ 
+.home__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-top: 0.5rem;
 }
 
-.home__title {
+.home__manifiesto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-left: 100px;
+}
+
+.home__manifiesto-title {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.home__manifiesto-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+ 
+/* Scroll indicator */
+.home__scroll-indicator {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgb(255, 255, 255);
-  margin: 0;
-  font-family: "jetBrains Mono";
-  font-weight: bolder;
-  font-size: 60px;
-  line-height: 70px;
-  padding-top: 20px;
+  gap: 0.75rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 100px;
 }
-
-.home__subtitle {
-  font-family: "Barlow";
-  font-size: 20px;
-  margin: 20px 0;
+ 
+.home__scroll-line {
+  width: 1px;
+  height: 64px;
+  background: linear-gradient(to bottom, var(--color-primary), transparent);
+  transform-origin: top;
 }
-
-.home__logo {
-  width: 900px;
-  height: auto;
-  /* margin: 25px 0; */
+ 
+.home__scroll-text {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  writing-mode: vertical-lr;
 }
-
-.home__buttons {
+ 
+/* ---- RIGHT ---- */
+.home__hero-right {
+  position: relative;
+  height: 100%;
   display: flex;
-  gap: 40px;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
 }
-
-.home__button {
-  display: inline-block;
-  font-family: "Shadows Into Light";
-  font-size: 20px;
-  height: 50px;
-  width: 200px;
-  text-decoration: none;
-  color: #fff;
-  background-color: turquoise;
-  border: 2px solid black;
-  border-radius: 10px;
-  box-shadow: 5px 5px 0px #000;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  margin: 0;
+ 
+.home__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
 }
-
-.home__button:hover {
-  background-color: #fff;
-  color: black;
-  border: 2px solid turquoise;
-  box-shadow: 5px 5px 0px turquoise;
+ 
+.home__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
-
-.home__button:active {
-  background-color: turquoise;
-  box-shadow: none;
-  transform: translateY(4px);
-}
-
-@keyframes portfolioFadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+ 
+/* Número decorativo */
+.home__deco-number {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--color-secondary);
+  opacity: 0.5;
 }
