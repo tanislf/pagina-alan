@@ -2,10 +2,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { LogoLoop } from "../components/Animations/GalleryLoop.jsx";
-import union from "../images/Proyectos/Sinergia/union-final.webp";
-import sayar from "../images/Proyectos/Sayar/sayar-final.webp";
-import nisa from "../images/Proyectos/Nisa/NISA_Final.webp";
-import carys from "../images/Proyectos/Carys/carys-final.webp";
+import union from "../images/Proyectos/Exhibiciones/Sinergia/union-final.webp";
+import sayar from "../images/Proyectos/Exhibiciones/Sayar/sayar-final.webp";
+import nisa from "../images/Proyectos/Exhibiciones/Nisa/NISA_Final.webp";
+import carys from "../images/Proyectos/Exhibiciones/Carys/carys-final.webp";
 
 import cafartaza from "../images/Home/cafartaza.png";
 

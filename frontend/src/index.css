@@ -5,6 +5,9 @@
 @import url(./styles/Home.css);
 @import url(./styles/Proyectos.css);
 @import url(./styles/Servicios.css);
+@import url(./styles/Colaboraciones.css);
+@import url(./styles/ModalProyectos.css);
+@import url(./styles/ModalColaboraciones.css);
 @import url(./styles/Animations/Masonry.css);
 @import url(./styles/Animations/GalleryLoop.css);
 @import url(./styles/Footer.css);

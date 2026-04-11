@@ -150,7 +150,7 @@ function Servicios() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        04
+        05
       </motion.span>
     </main>
   );

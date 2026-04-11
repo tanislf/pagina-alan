@@ -1,0 +1,129 @@
+.modal-proyectos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(8px);
+  padding: 40px;
+}
+
+.modal-proyectos__content {
+  background: var(--surface, #fcf9f2);
+  width: 50vw; /* 50% screen width as requested */
+  max-height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-proyectos__close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.modal-proyectos__close:hover {
+  transform: rotate(90deg);
+}
+
+.modal-proyectos__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Or adjust based on your needs, but keeps it consistent */
+  overflow: hidden;
+  background: #000;
+}
+
+.modal-proyectos__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Shows image "completa" as requested */
+  transition: transform 0.5s ease;
+}
+
+.modal-proyectos__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Allows hover on the wrapper/image */
+}
+
+.modal-proyectos__image-wrapper:hover .modal-proyectos__overlay {
+  opacity: 1;
+}
+
+.modal-proyectos__description {
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 80%;
+}
+
+.modal-proyectos__footer {
+  padding: 24px 40px;
+  text-align: left;
+  background: var(--surface, #fcf9f2);
+}
+
+.modal-proyectos__title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--on-surface, #1c1c18);
+  margin-bottom: 4px;
+}
+
+.modal-proyectos__meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary, #6b002a);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .modal-proyectos__content {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-proyectos {
+    padding: 20px;
+  }
+  .modal-proyectos__content {
+    width: 95vw;
+  }
+  .modal-proyectos__close {
+    right: 0;
+    top: -50px;
+  }
+  .modal-proyectos__title {
+    font-size: 1.4rem;
+  }
+}

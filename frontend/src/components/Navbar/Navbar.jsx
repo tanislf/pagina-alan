@@ -37,10 +37,13 @@ function Navbar({ onContactClick }) {
         <Link to="/proyectos" className="navbar__link" onClick={closeMenu}>
           Proyectos
         </Link>
+        <Link to="/colaboraciones" className="navbar__link" onClick={closeMenu}>
+          Colaboraciones
+        </Link>
         <Link to="/servicios" className="navbar__link" onClick={closeMenu}>
           Servicios
         </Link>
-
+       
         <button
           type="button"
           className="navbar__link"

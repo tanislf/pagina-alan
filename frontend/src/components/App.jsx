@@ -3,6 +3,7 @@ import Home from "../pages/Home.jsx";
 import About from "../pages/About.jsx";
 import Proyectos from "../pages/Proyectos.jsx";
 import Servicios from "../pages/Servicios.jsx";
+import Colaboraciones from "../pages/Colaboraciones.jsx";
 import Footer from "./Footer/Footer.jsx";
 
 import {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/servicios" element={<Servicios />} />
+          <Route path="/colaboraciones" element={<Colaboraciones />} />
         </Routes>
         <Footer />
       </BrouserRouter>

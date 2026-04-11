@@ -6,7 +6,7 @@ function Footer({ onContactClick }) {
     <footer className="footer">
       <div className="footer__nav-container">
         <div className="footer__logo-container">
-          <p className="footer__text">SHALL WE TALK?</p>
+          <p className="footer__text">TRABAJEMOS JUNTOS</p>
           <img className="footer__logo" src={sayarpng} alt="Logo" />
         </div>
         <div className="footer__navbar">
