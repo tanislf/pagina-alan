@@ -105,25 +105,4 @@
   color: var(--primary, #6b002a);
 }
 
-/* Responsiveness */
-@media (max-width: 1024px) {
-  .modal-proyectos__content {
-    width: 80vw;
-  }
-}
 
-@media (max-width: 768px) {
-  .modal-proyectos {
-    padding: 20px;
-  }
-  .modal-proyectos__content {
-    width: 95vw;
-  }
-  .modal-proyectos__close {
-    right: 0;
-    top: -50px;
-  }
-  .modal-proyectos__title {
-    font-size: 1.4rem;
-  }
-}

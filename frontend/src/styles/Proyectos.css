@@ -117,6 +117,13 @@
   color: var(--on-surface, #1c1c18);
 }
 
+.proyectos__card-tool {
+    font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--on-secondary-container, #6d605b);
+}
+
 .proyectos__deco-number {
   font-family: 'JetBrains Mono', monospace;
   font-size:0.65rem;
@@ -125,6 +132,51 @@
   opacity: 0.05;
   margin-top: 100px;
   /* z-index: -1; */
+}
+
+/* Accordion */
+.proyectos__accordion {
+  margin-top: 20px;
+  border-top: 1px solid rgba(137, 113, 117, 0.1);
+  padding-top: 12px;
+}
+
+.proyectos__accordion-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--secondary, #695b57);
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.proyectos__accordion-toggle:hover {
+  color: var(--primary, #6b002a);
+  transform: translateX(4px);
+}
+
+.proyectos__accordion-toggle.active {
+  color: var(--primary, #6b002a);
+  margin-bottom: 4px;
+}
+
+.proyectos__accordion-content {
+  overflow: hidden;
+}
+
+.proyectos__accordion-content p {
+  padding: 8px 0 4px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--on-secondary-container, #6d605b);
 }
 
 

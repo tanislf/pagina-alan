@@ -11,6 +11,8 @@
 @import url(./styles/Animations/Masonry.css);
 @import url(./styles/Animations/GalleryLoop.css);
 @import url(./styles/Footer.css);
+@import url(./styles/media.css);
+
 
 :root {
   /* Industrial Monolith Palette - The Tactile Archive */

@@ -12,42 +12,41 @@ const PHASES = [
   {
     order: "01",
     title: "Investigación",
-    description: "Inmersión profunda en las restricciones técnicas y comportamientos del usuario para establecer una base sólida de diseño.",
+    description: "Análisis profundo del usuario, sus necesidades y contexto. Defino el problema real antes de buscar soluciones.",
     icon: iconInvestigacion,
     icon2: iconFlecha,
-    action1: "Análisis de usuario",
-    action2: "Análisis de mercado",
-    action3: "Auditoría de materiales"
+    action1: "Brief de Diseño",
+    action2: "User Research"
   },
   {
     order: "02",
     title: "Ideación",
-    description: "Exploración de posibilidades estéticas y conceptos estructurales a través de una iteración visual rápida.",
+    description: "Exploración creativa mediante bocetos rápidos, moodboards y conceptos divergentes.",
     icon: iconIdeacion,
     icon2: iconFlecha,
     action1: "Sketches",
-    action2: "Moodboard",
-    action3: "Conceptos 3D"
+    action2: "Conceptos 3D"
   },
   {
     order: "03",
-    title: "Prototipado",
-    description: "Refinamiento de la forma física y digital para asegurar la excelencia ergonómica y visual del objeto.",
+    title: "Diseño 3D",
+    description: "Modelado 3D en diversos programas, para concretar conceptos y propuestas.",
     icon: iconPrototipado,
     icon2: iconFlecha,
     action1: "Renders HD",
-    action2: "Animaciones",
-    action3: "Mockups e impresión 3D"
+    action2: "Modelos 3D",
+    action3: "Animaciones"
   },
   {
     order: "04",
-    title: "Producción",
-    description: "Ingeniería para la manufactura y supervisión de la transición del diseño a la planta de producción.",
+    title: "Prototipado",
+    description: "Materialización de ideas en prototipos funcionales, en diversos materiales. Iteración basada en testing real.",
     icon: iconProduccion,
     icon2: iconFlecha,
-    action1: "Ingeniería de detalle",
-    action2: "Planos técnicos",
-    action3: "Supervisión de producción"
+    action1: "Prototipos funcionales",
+    action2: "Maquetas de apariencia",
+    action3: "Testing",
+    action4: "Planos técnicos"
   }
 ];
 
@@ -129,6 +128,7 @@ function Servicios() {
         >
           <span className="servicios__nav-label">Portafolio</span>
           <h2 className="servicios__nav-title">Diseño de Producto</h2>
+          <span className="servicios__nav-label">Desde el concepto hasta la manufactura. Productos físicos que resuelven problemas reales.</span>
         </motion.div>
 
         <motion.div 
@@ -141,6 +141,7 @@ function Servicios() {
         >
           <span className="servicios__nav-label">Portafolio</span>
           <h2 className="servicios__nav-title">Diseño de Mobiliario</h2>
+          <span className="servicios__nav-label">Piezas de mobiliario que combinan ergonomía, estética y durabilidad.</span>
         </motion.div>
       </section>
 

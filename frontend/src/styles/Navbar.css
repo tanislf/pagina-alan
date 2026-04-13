@@ -66,11 +66,25 @@
 
 .navbar__toggle span {
   display: block;
-  height: 1px;
+  height: 2px;
   width: 100%;
   background-color: var(--color-on-surface);
   border-radius: 0;
   transition:
-    transform 0.3s ease,
+    transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
     opacity 0.3s ease;
 }
+
+.navbar__toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar__toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.navbar__toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+

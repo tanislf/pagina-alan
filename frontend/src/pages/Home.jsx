@@ -6,6 +6,7 @@ import union from "../images/Proyectos/Exhibiciones/Sinergia/union-final.webp";
 import sayar from "../images/Proyectos/Exhibiciones/Sayar/sayar-final.webp";
 import nisa from "../images/Proyectos/Exhibiciones/Nisa/NISA_Final.webp";
 import carys from "../images/Proyectos/Exhibiciones/Carys/carys-final.webp";
+import modubo from "../images/Proyectos/Exhibiciones/Modubo/modubo-final.webp";
 
 import cafartaza from "../images/Home/cafartaza.png";
 
@@ -84,6 +85,7 @@ const imageLogos = [
   { src: sayar, alt: "sayar",  },
   { src: nisa, alt: "nisa",  },
   { src: carys, alt: "carys",  },
+  { src: modubo, alt: "modubo",  },
 ];
 
   return (

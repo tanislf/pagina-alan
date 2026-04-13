@@ -33,7 +33,7 @@ const ModalColaboraciones = ({ isOpen, onClose, project }) => {
                 className="modal-colaboraciones__image"
               />
               <div className="modal-colaboraciones__overlay">
-                <p className="modal-colaboraciones__description">{project.description}</p>
+                <p className="modal-colaboraciones__description">{project.description2}</p>
               </div>
             </div>
 

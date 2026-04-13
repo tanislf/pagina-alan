@@ -4,11 +4,13 @@
   flex-direction: column;
   justify-content: center;
   background-color: #fcf9f2;
-  margin: 30px 0 0 0;
+  margin: 0;
   gap: 30px;
-  height: 100vh;
+  padding: 80px 20px;
+  min-height: 40vh;
   font-family: "Quicksand";
 }
+
 
 .footer__logo-container {
   display: flex;

@@ -105,25 +105,4 @@
   color: var(--primary, #6b002a);
 }
 
-/* Responsiveness */
-@media (max-width: 1024px) {
-  .modal-colaboraciones__content {
-    width: 80vw;
-  }
-}
 
-@media (max-width: 768px) {
-  .modal-colaboraciones {
-    padding: 20px;
-  }
-  .modal-colaboraciones__content {
-    width: 95vw;
-  }
-  .modal-colaboraciones__close {
-    right: 0;
-    top: -50px;
-  }
-  .modal-colaboraciones__title {
-    font-size: 1.4rem;
-  }
-}
