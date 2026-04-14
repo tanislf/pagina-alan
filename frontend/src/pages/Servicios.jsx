@@ -15,8 +15,7 @@ const PHASES = [
     description: "Análisis profundo del usuario, sus necesidades y contexto. Defino el problema real antes de buscar soluciones.",
     icon: iconInvestigacion,
     icon2: iconFlecha,
-    action1: "Brief de Diseño",
-    action2: "User Research"
+    actions: ["Brief de Diseño", "User Research"]
   },
   {
     order: "02",
@@ -24,8 +23,7 @@ const PHASES = [
     description: "Exploración creativa mediante bocetos rápidos, moodboards y conceptos divergentes.",
     icon: iconIdeacion,
     icon2: iconFlecha,
-    action1: "Sketches",
-    action2: "Conceptos 3D"
+    actions: ["Sketches", "Conceptos 3D"]
   },
   {
     order: "03",
@@ -33,9 +31,7 @@ const PHASES = [
     description: "Modelado 3D en diversos programas, para concretar conceptos y propuestas.",
     icon: iconPrototipado,
     icon2: iconFlecha,
-    action1: "Renders HD",
-    action2: "Modelos 3D",
-    action3: "Animaciones"
+    actions: ["Renders HD", "Modelos 3D", "Animaciones"]
   },
   {
     order: "04",
@@ -43,10 +39,7 @@ const PHASES = [
     description: "Materialización de ideas en prototipos funcionales, en diversos materiales. Iteración basada en testing real.",
     icon: iconProduccion,
     icon2: iconFlecha,
-    action1: "Prototipos funcionales",
-    action2: "Maquetas de apariencia",
-    action3: "Testing",
-    action4: "Planos técnicos"
+    actions: ["Prototipos funcionales", "Maquetas de apariencia", "Testing", "Planos técnicos"]
   }
 ];
 
@@ -101,18 +94,12 @@ function Servicios() {
             </h3>
             <p className="servicios__phase-desc">{phase.description}</p>
 
-            <div className="servicios__phase-icon-container">
-              <img src={phase.icon2} alt="icon" className="servicios__phase-icon" />
-              <p className="servicios__phase-icon-text">{phase.action1}</p>
-            </div>
-             <div className="servicios__phase-icon-container">
-              <img src={phase.icon2} alt="icon" className="servicios__phase-icon" />
-              <p className="servicios__phase-icon-text">{phase.action2}</p>
-            </div>
-             <div className="servicios__phase-icon-container">
-              <img src={phase.icon2} alt="icon" className="servicios__phase-icon" />
-              <p className="servicios__phase-icon-text">{phase.action3}</p>
-            </div>
+            {phase.actions.map((action, i) => (
+              <div key={i} className="servicios__phase-icon-container">
+                <img src={phase.icon2} alt="icon" className="servicios__phase-icon" />
+                <p className="servicios__phase-icon-text">{action}</p>
+              </div>
+            ))}
           </motion.article>
         ))}
       </section>

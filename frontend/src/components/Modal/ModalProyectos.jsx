@@ -27,11 +27,22 @@ const ModalProyectos = ({ isOpen, onClose, project }) => {
             </button>
             
             <div className="modal-proyectos__image-wrapper">
-              <img
-                src={project.src}
-                alt={project.title}
-                className="modal-proyectos__image"
-              />
+              {project.type === "video" ? (
+                <video
+                  src={project.src}
+                  className="modal-proyectos__image"
+                  controls
+                  autoPlay
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={project.src}
+                  alt={project.title}
+                  className="modal-proyectos__image"
+                />
+              )}
               <div className="modal-proyectos__overlay">
                 <p className="modal-proyectos__description">{project.description}</p>
               </div>

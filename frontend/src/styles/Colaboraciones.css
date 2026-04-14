@@ -26,14 +26,7 @@
   line-height: 1.6;
   color: var(--on-secondary-container, #6d605b);
 }
-.colaboraciones__marca-title {
-  font-family: 'Newsreader', serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 400;
-  line-height: 1;
-  transition: all 0.4s ease;
-  position: relative;
-}
+
 
 /* Filters */
 .colaboraciones__filters {
@@ -79,7 +72,7 @@
 }
 
 .colaboraciones__card {
-  background: var(--surface-container-lowest, #ffffff);
+  background: var(--surface-container-lowest, #000000);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   position: relative;
@@ -93,11 +86,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  
 }
 
 .colaboraciones__image {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: auto;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -126,7 +121,7 @@
   font-family: 'Newsreader', serif;
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--on-surface, #1c1c18);
+  color: var(--on-surface, #ffffff);
 }
 
 .colaboraciones__card-description {

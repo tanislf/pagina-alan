@@ -146,6 +146,7 @@
   letter-spacing: 0.2em;
   color: var(--secondary, #695b57);
   margin-bottom: 12px;
+  margin-top: 15px;
   display: block;
 }
 

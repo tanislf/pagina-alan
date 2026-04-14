@@ -1,1 +1,1 @@
-# React + Vite. APLICACIÓN FULL-STACK. Encontrará mi página dando click en "mi-pagina-web" de README en: https://mi-pagina-web-two-self.vercel.app
+# React + Vite. APLICACIÓN FRONTEND. Esta es una página web para un diseñador industrial. Realizada con React, Vite, Framer Motion y CSS. Mediante Antigravity

@@ -22,6 +22,9 @@ import terben from "../images/Colaboraciones/Diseñadores/TerbenPinson.png";
 //images from diseño web
 import artboom from "../images/Colaboraciones/DiseñoWeb/artboom.png";
 
+//images from identidad grafica
+import soleonico from "../images/Colaboraciones/IdentidadGrafica/soleonico.webp"
+
 
 const CATEGORIES = ["Todos", "Diseño Web", "Diseñadores", "Marcas",];
 
@@ -39,6 +42,7 @@ const PROJECTS_DATA = [
   { id: 11, title: "Mut Design", category: "Diseñadores", name: "Mut Design", src: mut, description: "Alberto Sánchez y Eduardo Villalón.", description2: "MUT Design Studio está formado por un equipo multidisciplinario. Su inspiración proviene de la naturaleza y de los objetos aparentemente prosaicos que componen el rompecabezas de su vida diaria, siempre fiel a los principios del diseño emocional."},
   { id: 12, title: "Hiroshi Tsunoda", category: "Diseñadores", name: "Hiroshi Tsunoda", src: hiroshi, description: "Diseñador Japonés.", description2: " Encuentra inspiración en su entorno, abordando los pequeños desafíos de la vida diaria mientras explora nuevos territorios conceptuales y formales. Con sede en Barcelona, centrado en soluciones innovadoras con una perspectiva multicultural. Su trabajo ha sido expuesto a nivel mundial, incluyendo Londres, Milán, París, Hangzhou y Moscú."},
   { id: 13, title: "Terben Pinson", category: "Diseñadores", name: "Terben Pinson", src: terben, description: "Diseñador Mexicano.", description2: "Ingeniero en innovación y diseño, cofundador de la marca Prannus, diseño mexicano contemporáneo, basado en luminarias decorativas, muebles y objetos utilitarios. También cuenta con su marca personal “Terben Pinson” en donde brinda sus servicios profesionales de diseño de producto y dirección creativa colaborando con startups y PYMES."},
+  { id: 14, title: "Soleonico", category: "Identidad Grafica", name: "Soleonico", src: soleonico, description: "Diseñadora Gráfica Mexicana.", description2: "Enfocada en la creación de identidades visuales, diseño de mercancía y promocionales. Ayudando a los clientes a construir marcas, identidades que conectan con personas y generan un impacto duradero. Hemos trabajado en conjunto en diversos proyectos, desde la concepción y diseño de la marca “Sayar”; hasta el diseño de las pequeñas marcas de algunos de nuestros proyectos, como lo son: Cactácea, Carys y Nómada."},
   // Reusing catador as placeholder for others
 ];
 
@@ -129,7 +133,6 @@ function Colaboraciones() {
                   className="colaboraciones__image" 
                   loading="lazy"
                 />
-                <p className="colaboraciones__marca-title">{project.name}</p>
               </div>
               <div className="colaboraciones__card-content">
                 <span className="colaboraciones__card-category">{project.category}</span>

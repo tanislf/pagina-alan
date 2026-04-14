@@ -18,6 +18,11 @@ import laura from "../images/Proyectos/Arte/Laura/laura.webp";
 import bosqueAzul from "../images/Proyectos/Arte/Bosque-azul/bosque-azul.webp";
 
 //images from animaciones
+import nisaAnimacion from "../images/Proyectos/Animaciones/NisaAnimacion.mp4";
+import sayarAnimacion from "../images/Proyectos/Animaciones/SayarAnimacion.mp4";
+import moduboAnimacion from "../images/Proyectos/Animaciones/ModuboAnimacion.mp4";
+import keyhardyAnimacion from "../images/Proyectos/Animaciones/KeyhardyAnimacion.mp4";
+import cafarAnimacion from "../images/Proyectos/Animaciones/CafarAnimacion.mp4";
 
 //images from producto
 import prometeo from "../images/Proyectos/Producto/Prometeo/Prometeo.webp";
@@ -65,6 +70,12 @@ const PROJECTS_DATA = [
   { id: 19, year: 2025, title: "Bauspiel", category:"Producto", src: bauspiel, tool:"Fabricado con madera de pino", description: "En 1924, Alma Siedhoff-Buscher diseñó Bauspiel. \"Nuestros juguetes (Bauhaus): la forma - simple - inconfundiblemente clara y definida - la variedad y la estimulación son creados por los propios niños a través de la combinación, la construcción. En consecuencia, un desarrollo sostenido\"." },
   { id: 20, year: 2025, title: "Anhelos Diversos", category:"Producto", src: anhelosDiversos, tool:"Modelado en Rhinoceros y renderizado en V-Ray.", description: "Una colección inspirada en la elegancia de la talavera, buscando generar piezas elegantes, piezas que invitan a la apreciación. Compuesto por 3 productos: Silvia, un florero, representante de la naturaleza, lo inorgánico que sostiene y lo orgánico que florece; Sia, una taza, símbolo de la dualidad entre lo intelectual/lógico y la intuición; Selene, una luminaria ambiental que busca recordarnos el movimiento y la atmósfera que puede generar la luna a lo largo de sus fases." },
   { id: 21, year: 2024, title: "Demubo", category:"Producto", src: demubo, tool:"Fabricado en MDF y Triplay de madera de pino, renders en Blender.", description: "Una pieza que forma parte de la familia “Modubo”, su nombre es un juego de palabras, haciendo uso del prefijo “Demi” y Modubo. Una pieza nacida tras múltiples iteraciones jugando con las figuras básicas. Un objeto más decorativo, que busca generar espacios diferentes, estructuras para almacenamiento y tótems con un uso más similar a celosías." },
+  //animaciones
+  { id: 22, year: 2024, title: "Nisa", category: "Animaciones", src: nisaAnimacion, type: "video", tool: "Animación realizada en Blender.", description: "Exploración de movimiento y función del taburete Nisa. La animación destaca la versatilidad y el diseño modular museográfico inspirado en la cultura mexicana." },
+  { id: 23, year: 2024, title: "Sayar", category: "Animaciones", src: sayarAnimacion, type: "video", tool: "Animación realizada en Blender.", description: "Exploración de movimiento y función del florero Sayar. La animación muestra su uso como pieza decorativa y su capacidad para realzar la belleza de las flores." },
+  { id: 24, year: 2024, title: "Modubo", category: "Animaciones", src: moduboAnimacion, type: "video", tool: "Animación realizada en Blender.", description: "Exploración de movimiento y función del taburete Modubo. La animación destaca la versatilidad y el diseño modular museográfico inspirado en la cultura mexicana." },
+  { id: 25, year: 2024, title: "Key Hardy", category: "Animaciones", src: keyhardyAnimacion, type: "video", tool: "Animación realizada en Blender.", description: "Un personaje original, inspirado en las historias de aventureros espaciales, soldados dedicados a la protección de la humanidad o simples cazarrecompensas, que viven aventuras a lo largo de la galaxia. Primera animación que he hecho en blender, explorando un poco las diferentes funciones." },
+  { id: 26, year: 2024, title: "Cafar", category: "Animaciones", src: cafarAnimacion, type: "video", tool: "Animación realizada en Blender.", description: "Exploración de movimiento y función del set de tazas para café. La animación muestra su uso como pieza para compartir y disfrutar de una buena taza de café." },
 ].sort((a, b) => b.year - a.year);
 
 const ProjectCard = ({ project, onOpenModal }) => {
@@ -86,12 +97,24 @@ const ProjectCard = ({ project, onOpenModal }) => {
       onClick={() => onOpenModal(project)}
     >
       <div className="proyectos__image-container">
-        <img 
-          src={project.src} 
-          alt={project.title} 
-          className="proyectos__image" 
-          loading="lazy"
-        />
+        {project.type === "video" ? (
+          <video 
+            src={project.src} 
+            className="proyectos__image" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            preload="metadata"
+          />
+        ) : (
+          <img 
+            src={project.src} 
+            alt={project.title} 
+            className="proyectos__image" 
+            loading="lazy"
+          />
+        )}
       </div>
       <div className="proyectos__card-content">
         <span className="proyectos__card-category">{project.year} | {project.category}</span>
