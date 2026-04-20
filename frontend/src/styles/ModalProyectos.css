@@ -50,8 +50,61 @@
 .modal-proyectos__image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Shows image "completa" as requested */
-  transition: transform 0.5s ease;
+  object-fit: contain;
+}
+
+.modal-proyectos__media-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-proyectos__nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.modal-proyectos__nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modal-proyectos__nav-btn--prev {
+  left: 20px;
+}
+
+.modal-proyectos__nav-btn--next {
+  right: 20px;
+}
+
+.modal-proyectos__counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  z-index: 10;
 }
 
 .modal-proyectos__overlay {
@@ -103,6 +156,68 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--primary, #6b002a);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .modal-proyectos__content {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-proyectos {
+    padding: 20px;
+  }
+
+  .modal-proyectos__content {
+    width: 95vw;
+    max-height: 85vh;
+  }
+
+  .modal-proyectos__close {
+    top: -30px;
+    right: 0;
+    font-size: 2rem;
+  }
+
+  .modal-proyectos__nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-proyectos__nav-btn--prev {
+    left: 10px;
+  }
+
+  .modal-proyectos__nav-btn--next {
+    right: 10px;
+  }
+
+  .modal-proyectos__title {
+    font-size: 1.4rem;
+  }
+
+  .modal-proyectos__footer {
+    padding: 16px 20px;
+  }
+
+  .modal-proyectos__description {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-proyectos__image-wrapper {
+    aspect-ratio: 4 / 5; /* More portrait for mobile */
+  }
+  
+  .modal-proyectos__nav-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.3); /* Darker background for better visibility on mobile */
+  }
 }
 
 

@@ -117,9 +117,15 @@
   display: block;
 }
 
+.colaboraciones__card-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .colaboraciones__card-title {
   font-family: 'Newsreader', serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 400;
   color: var(--on-surface, #ffffff);
 }
@@ -128,7 +134,7 @@
   font-family: 'Manrope', sans-serif;
   font-size: 0.8rem;
   line-height: 1.6;
-  color: var(--on-secondary-container, #6d605b);
+  color: var(--on-secondary-container, #a88b7f);
 }
 
 .colaboraciones__deco-number {
@@ -139,4 +145,45 @@
   opacity: 0.05;
   margin-top: 100px;
   /* z-index: -1; */
+}
+
+.colaboraciones__link {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand";
+}
+
+.colaboraciones__card-button {
+  font-family: "Quicksand";
+  height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  background: black;
+  border: none;
+}
+
+.colaboraciones__card-button:hover {
+  cursor: pointer;
+  transform: translate(0, -0.4em);
+}
+
+.colaboraciones__card-button:not(hover) {
+  transition: all 1s;
+}
+
+.colaboraciones__card-button_insta {
+  background-image: url("../images/Icons/instagram.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+
+.colaboraciones__card-button_insta:hover {
+  background-color: #d62976;
+  transition-duration: 1s;
 }

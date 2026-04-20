@@ -1,8 +1,28 @@
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 
 const ModalProyectos = ({ isOpen, onClose, project }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [project]);
+
   if (!project) return null;
+
+  const sources = Array.isArray(project.src) ? project.src : [project.src];
+  const hasMultiple = sources.length > 1;
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev + 1) % sources.length);
+  };
+
+  const handlePrev = (e) => {
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev - 1 + sources.length) % sources.length);
+  };
 
   return (
     <AnimatePresence>
@@ -27,22 +47,62 @@ const ModalProyectos = ({ isOpen, onClose, project }) => {
             </button>
             
             <div className="modal-proyectos__image-wrapper">
-              {project.type === "video" ? (
-                <video
-                  src={project.src}
-                  className="modal-proyectos__image"
-                  controls
-                  autoPlay
-                  loop
-                  playsInline
-                />
-              ) : (
-                <img
-                  src={project.src}
-                  alt={project.title}
-                  className="modal-proyectos__image"
-                />
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="modal-proyectos__media-container"
+                >
+                  {project.type === "video" ? (
+                    <video
+                      src={sources[currentIndex]}
+                      className="modal-proyectos__image"
+                      controls
+                      autoPlay
+                      loop
+                      playsInline
+                    />
+                  ) : (
+                    <img
+                      src={sources[currentIndex]}
+                      alt={`${project.title} - ${currentIndex + 1}`}
+                      className="modal-proyectos__image"
+                    />
+                  )}
+                </motion.div>
+              </AnimatePresence>
+
+              {/*para múltiples imagenes*/}
+              {hasMultiple && (
+                <>
+                  <button 
+                    className="modal-proyectos__nav-btn modal-proyectos__nav-btn--prev" 
+                    onClick={handlePrev}
+                    aria-label="Anterior"
+                  >
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </button>
+                  <button 
+                    className="modal-proyectos__nav-btn modal-proyectos__nav-btn--next" 
+                    onClick={handleNext}
+                    aria-label="Siguiente"
+                  >
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                  
+                  <div className="modal-proyectos__counter">
+                    {currentIndex + 1} / {sources.length}
+                  </div>
+                </>
               )}
+              
               <div className="modal-proyectos__overlay">
                 <p className="modal-proyectos__description">{project.description}</p>
               </div>

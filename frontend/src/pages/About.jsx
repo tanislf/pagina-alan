@@ -71,7 +71,7 @@ function About() {
 
         {/* Nombre */}
         <motion.h1 className="about__me" variants={itemVariants}>
-          Alan Vásquez<br />Vázquez
+          Alan Vásquez<br />Vásquez
         </motion.h1>
 
         {/* Línea decorativa */}

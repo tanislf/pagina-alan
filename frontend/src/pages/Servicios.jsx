@@ -73,7 +73,7 @@ function Servicios() {
         </motion.h1>
         </div>
         <div className="srvicios__subtitle-container"> 
-          <p className="servicios__subtitle">La arquitectura es la búsqueda de la forma perfecta.<br/> la transformación de ideas en objetos tangibles y funcionales.<br/></p>
+          <p className="servicios__subtitle">El diseño es la búsqueda de la unión entre función y forma.<br/> la transformación de ideas en objetos tangibles y funcionales.<br/></p>
         </div>
       </header>
 
