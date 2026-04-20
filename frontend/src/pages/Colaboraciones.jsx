@@ -13,7 +13,7 @@ import sorribes from "../images/Colaboraciones/Marcas/SorribesLogo.webp";
 import talateca from "../images/Colaboraciones/Marcas/TalatecaLogo.webp";
 
 //images from diseñadores
-// import berto from "../images/Colaboraciones/Diseñadores/BertoSanchez.png";
+import berto from "../images/Colaboraciones/Diseñadores/berto.png";
 import clap from "../images/Colaboraciones/Diseñadores/ClapStudio.png";
 import juskani from "../images/Colaboraciones/Diseñadores/JuskaniAlonso.png";
 import mut from "../images/Colaboraciones/Diseñadores/MutDesign.png";
@@ -40,7 +40,7 @@ const PROJECTS_DATA = [
   //diseño web
   { id: 7, title: "Artboom. Design studio & Web Development", category: "Diseño Web", name: "Artboom", insta: "https://mi-pagina-web-two-self.vercel.app/", src: artboom, description: "Un estudio multidisciplinario enfocado en el diseño y desarrollo web, con experiencia en la creación de experiencias digitales innovadoras y personalizadas.", description2: "Encargada del desarrollo de nuestra web, trabajando en conjunto con Sayar, para generar una página principal de la marca, donde podrán conocer a mayor profundidad sobre nuestros proyectos y sobre nosotros."},
   //diseñadores
-  { id: 8, title: "Berto Sánchez", category: "Diseñadores", name: "Berto Sánchez", insta: "http://www.instagram.com/berto_by_berto/", description: "Cofundador del prestigioso estudio MUT Design. ", description2: "El diseñador Valenciano Alberto Sanchez. Su nueva marca personal, es concebida como una extensión natural de su universo creativo. Un proyecto que despliega su propio lenguaje sin renunciar a los principios que le han definido en su trayectoria."},
+  { id: 8, title: "Berto Sánchez", category: "Diseñadores", name: "Berto Sánchez", insta: "http://www.instagram.com/berto_by_berto/", src: berto, description: "Cofundador del prestigioso estudio MUT Design. ", description2: "El diseñador Valenciano Alberto Sanchez. Su nueva marca personal, es concebida como una extensión natural de su universo creativo. Un proyecto que despliega su propio lenguaje sin renunciar a los principios que le han definido en su trayectoria."},
   { id: 9, title: "Clap Studio", category: "Diseñadores", name: "Clap Studio", insta: "http://www.instagram.com/weareclapstudio/", src: clap, description: "Estudio de diseño Valenciano.", description2: "Fundado por Jordi Iranzo y Ángela Montagud. Dedicado al diseño de interiores, diseño de producto e instalaciones de arte. Un estudio reconocido por diversos premios a nivel nacional e internacional, con trabajos en Arabia Saudi, Brasil, Hong Kong, Suiza, España y más."},
   { id: 10, title: "Juskani Alonso", category: "Diseñadores", name: "Juskani Alonso", insta: "http://www.instagram.com/juskani_alonso/", src: juskani, description: "Diseñador Mexicano.", description2: "Especializados en el desarrollo de producto, mobiliario y arquitectura de interiores, combinan conocimientos, historias y experiencias, tomando en cuenta factores específicos para crear soluciones integrales y experiencias únicas de diseño."},
   { id: 11, title: "Mut Design", category: "Diseñadores", name: "Mut Design", insta: "http://www.instagram.com/mut_design/", src: mut, description: "Alberto Sánchez y Eduardo Villalón.", description2: "MUT Design Studio está formado por un equipo multidisciplinario. Su inspiración proviene de la naturaleza y de los objetos aparentemente prosaicos que componen el rompecabezas de su vida diaria, siempre fiel a los principios del diseño emocional."},
