@@ -47,37 +47,53 @@ const ModalProyectos = ({ isOpen, onClose, project }) => {
             </button>
             
             <div className="modal-proyectos__image-wrapper">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="modal-proyectos__media-container"
-                >
-                  {project.type === "video" ? (
-                    <video
-                      src={sources[currentIndex]}
-                      className="modal-proyectos__image"
-                      controls
-                      autoPlay
-                      loop
-                      playsInline
-                    />
-                  ) : (
-                    <img
-                      src={sources[currentIndex]}
-                      alt={`${project.title} - ${currentIndex + 1}`}
-                      className="modal-proyectos__image"
-                    />
-                  )}
-                </motion.div>
-              </AnimatePresence>
+              {/* Contenedor para Desktop (conserva botones y animaciones) */}
+              <div className="modal-proyectos__desktop-carousel">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentIndex}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="modal-proyectos__media-container"
+                  >
+                    {project.type === "video" ? (
+                      <video
+                        src={sources[currentIndex]}
+                        className="modal-proyectos__image"
+                        controls
+                        autoPlay
+                        loop
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={sources[currentIndex]}
+                        alt={`${project.title} - ${currentIndex + 1}`}
+                        className="modal-proyectos__image"
+                      />
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
 
-              {/*para múltiples imagenes*/}
+              {/* Contenedor para Mobile (Touch/Scroll Horizontal) */}
+              <div className="modal-proyectos__mobile-carousel">
+                {sources.map((src, index) => (
+                  <div key={index} className="modal-proyectos__mobile-slide">
+                    {project.type === "video" ? (
+                      <video src={src} className="modal-proyectos__image" controls playsInline />
+                    ) : (
+                      <img src={src} alt={`${project.title} ${index}`} className="modal-proyectos__image" />
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/*para múltiples imagenes en Desktop*/}
               {hasMultiple && (
-                <>
+                <div className="modal-proyectos__nav-container">
                   <button 
                     className="modal-proyectos__nav-btn modal-proyectos__nav-btn--prev" 
                     onClick={handlePrev}
@@ -100,7 +116,7 @@ const ModalProyectos = ({ isOpen, onClose, project }) => {
                   <div className="modal-proyectos__counter">
                     {currentIndex + 1} / {sources.length}
                   </div>
-                </>
+                </div>
               )}
               
               <div className="modal-proyectos__overlay">

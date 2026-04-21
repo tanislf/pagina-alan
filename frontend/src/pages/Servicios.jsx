@@ -72,7 +72,7 @@ function Servicios() {
           A forma
         </motion.h1>
         </div>
-        <div className="srvicios__subtitle-container"> 
+        <div className="servicios__subtitle-container"> 
           <p className="servicios__subtitle">El diseño es la búsqueda de la unión entre función y forma.<br/> la transformación de ideas en objetos tangibles y funcionales.<br/></p>
         </div>
       </header>
