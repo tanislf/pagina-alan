@@ -205,7 +205,7 @@ html, body {
     width: 100%;
     max-height: 60vh;
     height: auto;
-    min-height: 300px; /* Base height to give images presence */
+    min-height: 800px; /* Base height to give images presence */
     flex-shrink: 0;
     overflow: hidden;
     position: relative;
@@ -214,6 +214,11 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .modal-colaboraciones__overlay,
+  .modal-proyectos__overlay {
+    height: 400px;
   }
 
   /* Carousel Toggle */
