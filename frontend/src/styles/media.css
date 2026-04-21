@@ -1,3 +1,13 @@
+/* --- GLOBAL RESPONSIVE FIXES --- */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* --- TABLET (1024px) --- */
 @media (max-width: 1024px) {
   .modal-proyectos__content,
@@ -5,9 +15,14 @@
     width: 80vw;
   }
 
-
   .navbar {
     padding: 0 40px;
+  }
+
+  .proyectos__grid,
+  .colaboraciones__grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
   }
 }
 
@@ -21,7 +36,7 @@
   }
  
   .home__hero-left {
-    padding: 120px 2rem 4rem;
+    padding: 140px 2rem 4rem;
     height: auto;
     justify-content: flex-start;
   }
@@ -32,21 +47,17 @@
  
   .home__hero-right {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
   }
  
   .home__image {
     object-position: center center;
   }
 
-  .home__title {
-    font-size: clamp(3.5rem, 12vw, 5rem);
-  }
-
   .about {
     grid-template-columns: 1fr;
-    padding: 100px 2rem 60px;
-    gap: 48px;
+    padding: 120px 2rem 60px;
+    gap: 60px;
   }
 
   .about__image-col {
@@ -66,7 +77,7 @@
   }
 
   .footer__text {
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
   }
 }
@@ -76,7 +87,7 @@
   /* Navbar */
   .navbar {
     padding: 0 1.5rem;
-    height: 70px;
+    height: 80px;
   }
 
   .navbar__nav {
@@ -90,8 +101,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
-    transition: right 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    gap: 3rem;
+    transition: right 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index: 100;
   }
 
@@ -100,26 +111,54 @@
   }
 
   .navbar__link {
-    font-size: 1.5rem;
-    letter-spacing: 0.2em;
+    font-size: 2rem;
+    letter-spacing: 0.25em;
   }
 
   .navbar__toggle {
     display: flex;
+    margin-right: -10px; /* Safe area adjustment */
   }
 
-  /* Proyectos */
-  .proyectos {
-    padding-top: 80px;
+  /* Filters - Horizontal Scroll */
+  .proyectos__filters,
+  .colaboraciones__filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 1.5rem 15px; /* Added side padding to match page */
+    margin: 0 -1.5rem 40px; /* Counteracts page padding to go edge-to-edge */
+    gap: 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+  }
+
+  .proyectos__filters::-webkit-scrollbar,
+  .colaboraciones__filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .proyectos__filter-btn,
+  .colaboraciones__filter-btn {
+    flex-shrink: 0;
+    padding: 8px 18px;
+    font-size: 0.75rem;
+  }
+
+  /* Proyectos & Colaboraciones */
+  .proyectos, .colaboraciones {
+    padding: 100px 1.5rem 60px;
   }
   
-  .proyectos__grid {
+  .proyectos__grid, .colaboraciones__grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 32px;
   }
 
-  .proyectos__title {
-    font-size: 2.5rem;
+  .proyectos__title, .colaboraciones__title {
+    font-size: 12vw;
+    margin-bottom: 16px;
   }
 
   /* Servicios */
@@ -136,119 +175,115 @@
     font-size: 14vw;
   }
 
-  .servicios__header {
-    flex-direction: column;
-    margin-bottom: 60px;
-  }
-
   .servicios__subtitle-container {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 40px;
-    padding-top: 20px;
+    padding-top: 30px;
   }
 
-  .servicios__subtitle {
-    position: static;
-    border-left: 2px solid var(--color-primary);
-  }
-
-  .servicios__phase {
-    padding: 24px;
-  }
-
-  /* Footer */
-  .footer__logo-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer__text {
-    font-size: 32px;
-  }
-
-  .footer__logo {
-    width: 150px;
-  }
-
-  /* Modales */
+  /* Modales - Full Refactor */
   .modal-proyectos,
   .modal-colaboraciones {
-    padding: 10px;
-    align-items: flex-start; /* Permite scroll si el contenido es largo */
+    padding: 0;
+    align-items: flex-start;
     overflow-y: auto;
   }
 
   .modal-proyectos__content,
   .modal-colaboraciones__content {
     width: 100%;
-    max-height: none; /* Dejar que crezca si es necesario en móvil */
-    margin: 40px 0;
+    margin: 0;
+    min-height: 100vh;
+    box-shadow: none;
   }
 
   .modal-proyectos__image-wrapper,
   .modal-colaboraciones__image-wrapper {
-    aspect-ratio: 4 / 3; /* Más alto en móvil */
+    aspect-ratio: 1 / 1;
+    max-height: 60vh;
   }
 
   .modal-proyectos__close,
   .modal-colaboraciones__close {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     background: var(--color-surface);
     color: var(--color-on-surface);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    font-size: 1.5rem;
-    z-index: 2001;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 2100;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  .modal-proyectos__nav-btn,
+  .modal-colaboraciones__nav-btn {
+      display: none; /* Hide nav arrows on mobile, use swipe if implemented or scroll */
   }
 
   .modal-proyectos__footer,
   .modal-colaboraciones__footer {
-    padding: 20px;
-    text-align: center;
+    padding: 30px 20px;
+    text-align: left;
   }
 
   .modal-proyectos__title,
   .modal-colaboraciones__title {
-    font-size: 1.25rem;
-    margin-bottom: 8px;
+    font-size: 1.75rem;
+    line-height: 1.2;
   }
 
   .modal-proyectos__description,
   .modal-colaboraciones__description {
-      font-size: 0.95rem;
-      padding: 20px;
+      font-size: 1rem;
+      padding: 0 20px 40px;
+      max-width: 100%;
+      text-align: left;
+      opacity: 0.9;
   }
 
+  .modal-proyectos__overlay,
+  .modal-colaboraciones__overlay {
+      display: none; /* Remove overlay on mobile since it stacks below */
+  }
+
+  /* Footer */
+  .footer__logo-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer__text {
+    font-size: 28px;
+    line-height: 1.3;
+  }
 }
 
 /* --- SMALL MOBILE (480px) --- */
 @media (max-width: 480px) {
   .home__hero-left {
-      padding-top: 100px;
+      padding: 120px 1.5rem 3rem;
   }
     
   .home__title {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 15vw, 4rem);
   }
 
   .about {
-    padding: 80px 1.25rem 50px;
+    padding: 100px 1.5rem 50px;
   }
 
   .about__me {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .servicios__title, .servicios__title2 {
+    font-size: 16vw;
   }
   
   .footer__text {
-      font-size: 24px;
+      font-size: 22px;
   }
 }
 
