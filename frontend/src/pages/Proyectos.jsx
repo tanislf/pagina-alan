@@ -71,9 +71,9 @@ import sinergiaAnimacion from "../images/Proyectos/Animaciones/SinergiaAnimacion
 import prometeo from "../images/Proyectos/Producto/Prometeo/Prometeo.webp";
 import prometeo2 from "../images/Proyectos/Producto/Prometeo/prometeo2.webp";
 
-import towerOfPower from "../images/Proyectos/Producto/Tower-of-Power/tower.webp";
-import towerOfPower2 from "../images/Proyectos/Producto/Tower-of-Power/tower2.webp";
-import towerOfPower3 from "../images/Proyectos/Producto/Tower-of-Power/tower3.webp";
+import towerOfPower from "../images/Proyectos/Producto/Tower/tower.webp";
+import towerOfPower2 from "../images/Proyectos/Producto/Tower/tower2.webp";
+import towerOfPower3 from "../images/Proyectos/Producto/Tower/tower3.webp";
 
 import legoDuck from "../images/Proyectos/Producto/Lego-duck/lego-duck.webp";
 import legoDuck2 from "../images/Proyectos/Producto/Lego-duck/legoDuck2.webp";
