@@ -7,16 +7,16 @@ const specs = [
   { label: "Disciplina", value: "Diseño Industrial" },
   { label: "Experiencia", value: "2+ Años" },
   { label: "Especialidad", value: "Producto & Mobiliario modular" },
-  { label: "Herramientas", value: "SolidWorks, Rhino, V-Ray, Blender, Inventor, Photoshop" },
+  { label: "Softwares", value: "SolidWorks, Rhino, V-Ray, Blender, Inventor, Photoshop" },
   { label: "Materiales", value: "Cerámica, Madera, Joyería, Plásticos, Metales" },
   { label: "Habilidades", value: "Modelado digital, Prototipado, Storytelling, Conceptualización" },
 ];
 
 const awards = [
   { year: "2026", name: "Cactácea", event: "WantedDesign, Manhattan" },
-  { year: "2025", name: "Exelencia académica. Mención honorífica", event: "Universidad Anáhuac Puebla" },
+  { year: "2025", name: "Excelencia académica. Mención honorífica", event: "Universidad Anáhuac Puebla" },
   { year: "2024", name: "Cafar", event: "WantedDesign, Manhattan" },
-  { year: "2023", name: "Sayar, Salón Satélite", event: "Milán" },
+  { year: "2023", name: "Sayar", event: "Salone Satellite, Milán" },
 ];
 
 const containerVariants = {
