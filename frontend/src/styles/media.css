@@ -313,7 +313,7 @@ html, body {
     max-width: 100%;
     text-align: left;
     opacity: 0.85;
-    color: var(--on-surface, #1c1c18);
+    color: var(--on-surface, #fbf4f4);
     max-height: 35vh;
     overflow-y: auto;
     scrollbar-width: thin;
