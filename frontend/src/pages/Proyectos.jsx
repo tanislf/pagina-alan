@@ -98,9 +98,6 @@ import demubo3 from "../images/Proyectos/Producto/Demubo/demubo3.webp";
 
 
 //images from joyería
-import alborada1 from "../images/Proyectos/Producto/Joyería/alborada1.webp";
-import alborada2 from "../images/Proyectos/Producto/Joyería/alborada2.webp";
-
 import feliamor1 from "../images/Proyectos/Producto/Joyería/feliamor1.webp";
 import feliamor2 from "../images/Proyectos/Producto/Joyería/feliamor2.webp";
 import feliamor3 from "../images/Proyectos/Producto/Joyería/feliamor3.webp";
@@ -170,7 +167,6 @@ const PROJECTS_DATA = [
   { id: 21, year: 2024, title: "Demubo", category:"Producto", src: [demubo, demubo2, demubo3], tool:"Elaborado en MDF y Triplay de madera de pino, renders en Blender.", description: "Una pieza que forma parte de la familia “Modubo”, su nombre es un juego de palabras, haciendo uso del prefijo “Demi” y Modubo. Una pieza nacida tras múltiples iteraciones jugando con las figuras básicas. Un objeto más decorativo, que busca generar espacios diferentes, estructuras para almacenamiento y tótems con un uso más similar a celosías." },
   { id: 22, year: 2025, title: "Anhelos Diversos", category:"Producto", src: [anhelosDiversos, anhelosDiversos2, anhelosDiversos3, anhelosDiversos4], tool:"Modelado en Rhinoceros y renderizado en V-Ray.", description: "Una colección inspirada en la elegancia de la talavera, buscando generar piezas elegantes, piezas que invitan a la apreciación. Compuesto por 3 productos: Silvia, un florero, representante de la naturaleza, lo inorgánico que sostiene y lo orgánico que florece; Sia, una taza, símbolo de la dualidad entre lo intelectual/lógico y la intuición; Selene, una luminaria ambiental que busca recordarnos el movimiento y la atmósfera que puede generar la luna a lo largo de sus fases."},
   //joyería
-  { id: 23, year: 2025, title: "Alborada", category: "Joyería", src: [alborada1, alborada2], tool: "Elaborado en plata 925.", description: "La estrella del amanecer, la primera luz del día que se hace notar, imposible de no ver. Una compañera. Una presencia que busca ser un faro en la oscuridad. Un anillo de plata ley 925." },
   { id: 24, year: 2025, title: "Feliamor", category: "Joyería", src: [feliamor1, feliamor2, feliamor3], tool: "Elaborado en plata 925, mediante el proceso de cera perdida.", description: "Es una carta de amor, a la espera de un destinatario”. Un anillo de plata, que representa un amor maduro, los ideales y el pasado, como símbolo de completa entrega. Feliamor, puede definirse así: “Amar con la libertad de un gato." },
   { id: 25, year: 2025, title: "Fervor", category: "Joyería", src: [fervor1, fervor2, fervor3], tool: "Elaborado en plata 925, resina cristal y PLA.", description: "Una handchain y anillos, inspirados en la fuerza, fluidez y lo provocativo del fuego. Con una presencia envolvente, imposible de ocultar, es símbolo de pasión e intensidad auténtica. El fuego que enaltece tu corazón y lo mueve." },
   //animaciones
