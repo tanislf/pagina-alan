@@ -314,11 +314,16 @@ html, body {
     text-align: left;
     opacity: 0.85;
     color: var(--on-surface, #fbf4f4);
-    max-height: 35vh;
+    max-height: 25vh;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--primary) transparent;
   }
+
+.modal-proyectos__description {
+  color: black;
+  font-size: .9rem;
+}
 
   .colaboraciones__title {
     font-size: 2.7rem;
